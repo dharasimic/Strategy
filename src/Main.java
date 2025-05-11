@@ -1,6 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.teste;
+
+/**
+ *
+ * @author Gabriel
+ */
 public class Main {
     public static void main(String[] args) {
-        MediaStrategy estrategia = new Aritmetica();      // troque por new Geometrica()
+        //MediaStrategy estrategia = new Aritmetica();      // troque por new Geometrica()
+        MediaStrategy estrategia = new Geometrica();
         Disciplina d = new Disciplina(estrategia);
 
         d.setNome("Padrões de Desenvolvimento");
@@ -9,6 +20,7 @@ public class Main {
         d.calcularMedia();
 
         System.out.printf("P1: %.2f  P2: %.2f  Média: %.2f  Situação: %s%n",
-                d.getP1(), d.getP2(), d.getMedia(), d.getSituacao());
+                d.getP1(), d.getP2(), d.calcularMedia(), d.getSituacao());
     }
 }
+
